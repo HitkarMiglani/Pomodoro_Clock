@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro Clock</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="timer-display">
+        <div class="timer-circle">
+          <svg class="progress-ring" width="140" height="140">
+            <circle
+              cx="70"
+              cy="70"
+              r="65"
+              stroke="rgba(255,255,255,0.3)"
+              stroke-width="4"
+              fill="none"
+            />
+            <circle
+              class="progress-circle"
+              cx="70"
+              cy="70"
+              r="65"
+              stroke="white"
+              stroke-width="4"
+              fill="none"
+              stroke-linecap="round"
+              transform="rotate(-90 70 70)"
+            />
+          </svg>
+          <div class="timer-content">
+            <div id="time-left">25:00</div>
+            <div id="timer-label">Session Time</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="time-setting">
+          <p>Session Time</p>
+          <div class="time-control">
+            <button id="session-decrement" class="control-btn">
+              <span>−</span>
+            </button>
+            <span id="session-length" class="time-display">25 min</span>
+            <button id="session-increment" class="control-btn">
+              <span>+</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="time-setting">
+          <p>Break Time</p>
+          <div class="time-control">
+            <button id="break-decrement" class="control-btn">
+              <span>−</span>
+            </button>
+            <span id="break-length" class="time-display">5 min</span>
+            <button id="break-increment" class="control-btn">
+              <span>+</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="time-setting">
+          <p>Session Goal</p>
+          <div class="time-control">
+            <button id="goal-decrement" class="control-btn">
+              <span>−</span>
+            </button>
+            <span id="session-goal" class="time-display">4 sessions</span>
+            <button id="goal-increment" class="control-btn">
+              <span>+</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="session-progress">
+          <p>Progress</p>
+          <div class="progress-info">
+            <span id="session-count">0</span> / <span id="goal-display">4</span>
+            <div class="progress-bar">
+              <div class="progress-fill" id="progress-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timer-controls">
+          <button id="start-stop" class="main-btn start-btn">
+            <span class="btn-text">Start</span>
+            <span class="btn-icon">▶</span>
+          </button>
+          <button id="reset" class="main-btn reset-btn">
+            <span class="btn-text">Reset</span>
+            <span class="btn-icon">↻</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
